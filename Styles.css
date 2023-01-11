@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #626EDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0px;
+}
+.cards{
+    width: 70%;
+    height: auto;
+    padding: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.card{
+    width: 250px;
+    height: 350px;
+    background-color: #CCF4FE;
+    border-radius: 30px;
+    transition: ease-out 0.2s;
+    text-align: center;
+}
+.card img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.card p{
+    text-align: center;
+    font-size: 18px;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.add-card{
+    width: 250px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 300px;
+    background-color: rgba(0,0,0, 0.5);
+    transition: ease-out 0.2;
+    cursor: pointer;
+}
+.add-card:hover{
+    transform: scale(1.1);
+}
+.modal{
+    width: 100vw;
+    height: 150vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0, 0.4);
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add{
+    width: 600px;
+    height: 600px;
+    background-color: #CCF4FE;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.add input{
+    width: 60%;
+    height: 40px;
+}
+
+
+@media only screen and (max-width: 992px){
+    body{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <input type="password" id="userpass">
+    <button id="userbtn">nevtreh</button>
+
+
+    <div class="field"></div>
+    <button class="num" onclick="seven()">7</button>
+
+
+
+
+    <script>
+        const userName = document.getElementById("username");
+        const userPass = document.getElementById("userpass");
+        const btn = document.getElementById("userbtn");
+    
+        btn.onclick  = event => {   
+            if(userName.value != 0 && userPass.value != 0){
+                
+                if(userName.value == "qwerty" && userPass.value == "12345678"){
+                    location.href = "./index.html";
+                }
+                else{
+                    alert("Ner esvel nuuts ug buruu bn !");
+                }
+            }else{
+                alert("enter your name and pass !");
+            }
+        }
+    
+
+        function seven(){
+            document.querySelector(".field").innerHTML = "7";
+        }
+
+    </script>
+</body>
+</html>
